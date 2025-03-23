@@ -331,7 +331,7 @@ If 2i + 2 is to get the right child of element 1 which is 4. How can we manipula
 Lets use simple arithmetic
 
 ```text
-2i + 2 = 2 (this is elemnt 4)
+2i + 2 = 2 (this is element 4)
 i = (2 - 1) / 2
 i = 1/2
 i = 0.5 -> round down since it isn't a whole number and decimal numbers can't be an index.
