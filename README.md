@@ -12,7 +12,7 @@ Task 3: Pay bills (priority: 2) -> this is a high priority task
 
 Task 4: Call relatives (priority: 5) -> this is a highest priority task
 
-### Implementation: brute force method (bubble sort)
+### Implementation: Naive Method (Bubble Sort)
 
 1. Insert Do laundry (4)
 
@@ -62,7 +62,7 @@ Task 4: Call relatives (priority: 5) -> this is a highest priority task
    [ Pay bills (2), Go grocery shopping (3), Do laundry (4), Call relatives (5) ]
    ```
 
-### Implementation: priority queue method (min heap)
+### Implementation: Efficient Method (Heap)
 
 1. Insert Do laundry (4)
 
