@@ -187,9 +187,10 @@ Brute Force Method `O(n)`:
 
 Priority Queue Method `O(log n)`:
 
-1. Insert at next available position (left of 4): [2, 3, 4, 5, 1] => [Pay bills(2), Go grocery shopping(3), Do laundry(4), Call relatives(5), Take medicine(1)]
+1. Insert at next available position (left of 4):
 
 ```text
+[2, 3, 4, 5, 1] => [Pay bills(2), Go grocery shopping(3), Do laundry(4), Call relatives(5), Take medicine(1)]
           2
         /   \
       3       4
@@ -197,9 +198,10 @@ Priority Queue Method `O(log n)`:
     5   1
 ```
 
-2. Compare with parent (3 > 1) → swap: [2, 1, 4, 5, 3] => [Pay bills(2), Take medicine(1), Do laundry(4), Call relatives(5), Go grocery shopping(3)]
+2. Compare with parent (3 > 1)
 
 ```text
+swap: [2, 1, 4, 5, 3] => [Pay bills(2), Take medicine(1), Do laundry(4), Call relatives(5), Go grocery shopping(3)]
           2
         /   \
       1       4
@@ -207,9 +209,10 @@ Priority Queue Method `O(log n)`:
     5   3
 ```
 
-3. Compare with parent (2 > 1) → swap: [1, 2, 4, 5, 3] => [Take medicine(1), Pay bills(2), Do laundry(4), Call relatives(5), Go grocery shopping(3)]
+3. Compare with parent (2 > 1)
 
 ```text
+swap: [1, 2, 4, 5, 3] => [Take medicine(1), Pay bills(2), Do laundry(4), Call relatives(5), Go grocery shopping(3)]
           1
         /   \
       2       4
@@ -217,7 +220,8 @@ Priority Queue Method `O(log n)`:
     5   3
 ```
 
-Only 2 comparisons/swaps were needed = `O(log n)` steps in this insert. n = 5 (number of elements in the priority queue) and **log(n) ≈ 2.32 = 2**
+Only 2 comparisons/swaps were needed = `O(log n)` steps in this insert.
+n = 5 (number of elements in the priority queue) and **log(n) ≈ 2.32 = 2**
 
 We can see using the priority queue method is faster than the brute force method because it requires less comparisons/swaps.
 
