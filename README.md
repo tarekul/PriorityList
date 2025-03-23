@@ -187,7 +187,7 @@ Brute Force Method `O(n)`:
 
 Priority Queue Method `O(log n)`:
 
-1. Insert at next available position (left of 4):
+1. Insert at next available position (right of 3):
 
 ```text
 [2, 3, 4, 5, 1] => [Pay bills(2), Go grocery shopping(3), Do laundry(4), Call relatives(5), Take medicine(1)]
