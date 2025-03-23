@@ -12,7 +12,7 @@ Task 3: Pay bills (priority: 2) -> this is a high priority task
 
 Task 4: Call relatives (priority: 5) -> this is a highest priority task
 
-### Implementation: brute force method
+### Implementation: brute force method (bubble sort)
 
 1. Insert Do laundry (4)
 
