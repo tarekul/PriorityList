@@ -113,8 +113,8 @@ Compare with parent (2 < 3), so swap
 
           2
         /   \
-      3      4
-[Pay bills(2), Go grocery shopping(3), Do laundry(4)]
+      4      3
+[Pay bills(2), Do laundry(4), Go grocery shopping(3)]
 ```
 
 4. Insert Call relatives (5)
@@ -127,7 +127,7 @@ Insert at next available position (left of 4)
       /   \
     4      3
    /
-    5
+ 5
 [Pay bills(2), Go grocery shopping(3), Do laundry(4), Call relatives(5)]
 ```
 
