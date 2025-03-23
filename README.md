@@ -4,13 +4,19 @@
 
 Let's implement a priority queue for a todo list.
 
-Task 1: Do laundry (priority: 4) -> this is a low priority task
+#### Tasks List
 
-Task 2: Go grocery shopping (priority: 3) -> this is a medium priority task
+- **Task 1**: _Do laundry_ 🧺  
+  **Priority**: 4 — _Low priority task_
 
-Task 3: Pay bills (priority: 2) -> this is a high priority task
+- **Task 2**: _Go grocery shopping_ 🛒  
+  **Priority**: 3 — _Medium priority task_
 
-Task 4: Call relatives (priority: 5) -> this is a highest priority task
+- **Task 3**: _Pay bills_ 💸  
+  **Priority**: 2 — _High priority task_
+
+- **Task 4**: _Call relatives_ 📞  
+  **Priority**: 5 — _Lowest priority task_
 
 ### Implementation: Naive Method (Bubble Sort)
 
