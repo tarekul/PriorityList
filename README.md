@@ -268,9 +268,9 @@ The smallest child is 2, so we swap 3 with 2.
 
 #### Summary of removing a task:
 
-- Sorted List: O(n) (due to shifting elements after removal).
-  To remove the highest priority task from a sorted list is O(1) but we have to shift all elements left so it is O(n).
+- Sorted List: `O(n)` (due to shifting elements after removal).
+  To remove the highest priority task from a sorted list is `O(1)` but we have to shift all elements left so it is `O(n)`.
 
-- Min Heap: O(log n) (due to the heapify operation).
-  To remove the highest priority task from a min heap is O(1) but we have to heapify the tree so it is O(log n).
+- Min Heap: `O(log n)` (due to the heapify operation).
+  To remove the highest priority task from a min heap is `O(1)` but we have to heapify the tree so it is `O(log n)`.
   This involves comparing the root with its children and swapping if necessary.
