@@ -282,3 +282,101 @@ The smallest child is 2, so we swap 3 with 2.
 - Min Heap: `O(log n)` (due to the heapify operation).
   To remove the highest priority task from a min heap is `O(1)` but we have to heapify the tree so it is `O(log n)`.
   This involves comparing the root with its children and swapping if necessary.
+
+### How do we figure out the parent of an element in array in a heap?
+
+Lets look at the tree equivalent of the array
+
+```text
+    Tree:
+        1
+       / \
+      2   4
+     / \
+    5   3
+
+
+    Array: [1, 2, 4, 5, 3]
+```
+
+What is the parent of the element 4? Looking at the tree it is easy to see that the parent is 1. But how do we figure out the parent of the element 4 in the array?
+
+Let's revist the tree and try to figure and label each branch with its corresponding index
+
+```text
+    Tree:
+        1(0)
+        /  \
+      2(1)  4(2)
+      / \
+    5(3) 3(4)
+
+
+    Array: [1, 2, 4, 5, 3]
+```
+
+Can we figure out a formula to get the index of the children of a parent in the array? For example what is the index of the children of the parent 1?
+1 is index 0. 2 is index 1 and 4 is index 2.
+What formula can we use to get index 1 and 2 using index 0? To get the left child we can use 2i + 1 and to get the right child we can use 2i + 2.
+`2 * 0 + 1 = 1` -> index of element 2
+`2 * 0 + 2 = 2` -> index of element 4
+
+Let's try to figure out a formula to get the index of the parent of an element in the array.
+
+If 2i + 2 is to get the right child of element 1 which is 4. How can we manipulate the formula to get the parent of 4 which is 1?
+Lets use simple arithmetic
+
+```text
+2i + 2 = 2 (this is elemnt 4)
+i = (2 - 1) / 2
+i = 1/2
+i = 0.5 -> round down since it isn't a whole number and decimal numbers can't be an index.
+i = 0
+```
+
+To get i. we did the following:
+
+1. Subtract 1 from 2 (this is the right child of 1)
+2. Divide by 2
+
+This leads us to the formula: `i = (childIndex - 1) / 2`
+
+Lets try another example lets find the parent of the element 2 in this list `[1, 2, 4, 5, 3]`
+We can see in the tree below that index 1 is the parent
+
+```text
+    Tree:
+        1(0)
+        /  \
+      2(1)  4(2)
+      / \
+    5(3) 3(4)
+
+    Array: [1, 2, 4, 5, 3]
+```
+
+Lets use our formula: `i = (childIndex - 1) / 2`
+
+```text
+i = (childIndex - 1) / 2
+i = (1 - 1) / 2
+i = 0
+```
+
+Now we know how to get the index of the parent of an element in the array.
+From this array `[1, 2, 4, 5, 3]` we can get the parent of any element by using the formula `i = (childIndex - 1) / 2`
+
+```text
+    Tree:
+        1(0)
+        /  \
+      2(1)  4(2)
+      / \
+    5(3) 3(4)
+
+    Array: [1, 2, 4, 5, 3]
+```
+
+Parent of element 3(index 4) is (4 - 1) / 2 = 1.5 -> round down to 1
+Parent of element 5(index 3) is (3 - 1) / 2 = 1
+So the parent of both elements 3 and 5 is 2 which is index 1. We can verify by looking at the tree.
