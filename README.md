@@ -58,9 +58,9 @@ Task 4: Call relatives (priority: 5) -> this is a highest priority task
 
 8. No swaps needed (5 is the lowest priority)
 
-```text
-  [ Pay bills (2), Go grocery shopping (3), Do laundry (4), Call relatives (5) ]
-```
+   ```text
+   [ Pay bills (2), Go grocery shopping (3), Do laundry (4), Call relatives (5) ]
+   ```
 
 ### Implementation: priority queue method
 
