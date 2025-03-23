@@ -14,14 +14,53 @@ Task 4: Call relatives (priority: 5) -> this is a highest priority task
 
 ### Implementation: brute force method
 
-1. Insert Do laundry (4) -> [ Do laundry (4) ]
-2. Insert Go grocery shopping (3) -> [ Do laundry (4), Go grocery shopping (3) ]
-3. Swap (since 3 < 4) -> [ Go grocery shopping (3), Do laundry (4) ]
-4. Insert Pay bills (2) -> [ Go grocery shopping (3), Do laundry (4), Pay bills (2) ]
-5. Swap (since 2 < 3) -> [ Pay bills (2), Go grocery shopping (3), Do laundry (4) ]
-6. Swap (since 2 < 4) -> [ Pay bills (2), Go grocery shopping (3), Do laundry (4) ]
-7. Insert Call relatives (5) -> [ Pay bills (2), Go grocery shopping (3), Do laundry (4), Call relatives (5) ]
+1. Insert Do laundry (4)
+
+   ```text
+   [ Do laundry (4) ]
+   ```
+
+2. Insert Go grocery shopping (3)
+
+   ```text
+   [ Do laundry (4), Go grocery shopping (3) ]
+   ```
+
+3. Swap (since 3 < 4)
+
+   ```text
+   [ Go grocery shopping (3), Do laundry (4) ]
+   ```
+
+4. Insert Pay bills (2)
+
+   ```text
+   [ Go grocery shopping (3), Do laundry (4), Pay bills (2) ]
+   ```
+
+5. Swap (since 2 < 3)
+
+   ```text
+   [ Pay bills (2), Go grocery shopping (3), Do laundry (4) ]
+   ```
+
+6. Swap (since 2 < 4)
+
+   ```text
+   [ Pay bills (2), Go grocery shopping (3), Do laundry (4) ]
+   ```
+
+7. Insert Call relatives (5)
+
+   ```text
+   [ Pay bills (2), Go grocery shopping (3), Do laundry (4), Call relatives (5) ]
+   ```
+
 8. No swaps needed (5 is the lowest priority)
+
+```text
+  [ Pay bills (2), Go grocery shopping (3), Do laundry (4), Call relatives (5) ]
+```
 
 ### Implementation: priority queue method
 
