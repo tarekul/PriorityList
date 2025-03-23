@@ -189,7 +189,7 @@ Priority Queue Method (`O(log n)`):
     5   1
 ```
 
-2. Compare with parent (3 > 1) → swap: [2, 1, 3, 4, 5] => [Pay bills(2), Take medicine(1), Go grocery shopping(3), Do laundry(4), Call relatives(5)]
+2. Compare with parent (3 > 1) → swap: [2, 1, 4, 5, 3] => [Pay bills(2), Take medicine(1), Do laundry(4), Call relatives(5), Go grocery shopping(3)]
 
 ```text
           2
@@ -199,7 +199,7 @@ Priority Queue Method (`O(log n)`):
     5   3
 ```
 
-3. Compare with parent (2 > 1) → swap: [1, 2, 3, 4, 5] => [Take medicine(1), Pay bills(2), Go grocery shopping(3), Do laundry(4), Call relatives(5)]
+3. Compare with parent (2 > 1) → swap: [1, 2, 4, 5, 3] => [Take medicine(1), Pay bills(2), Do laundry(4), Call relatives(5), Go grocery shopping(3)]
 
 ```text
           1
@@ -212,3 +212,65 @@ Priority Queue Method (`O(log n)`):
 Only 2 comparisons/swaps were needed = `O(log n)` steps in this insert. n = 5 (number of elements in the priority queue) and **log(n) ≈ 2.32 = 2**
 
 We can see using the priority queue method is faster than the brute force method because it requires less comparisons/swaps.
+
+### Remove the high priority task from the list (naive approach)
+
+This is our list:
+
+```text
+[1, 2, 3, 4, 5]
+[Take medicine(1), Pay bills(2), Go grocery shopping(3), Do laundry(4), Call relatives(5)]
+```
+
+1. Remove the first element: [2, 3, 4, 5]
+   [Pay bills(2), Go grocery shopping(3), Do laundry(4), Call relatives(5)]
+
+### Remove the high priority task from the list (priority queue approach)
+
+This is our list:
+
+```text
+   [1, 2, 4, 5, 3]
+   [Take medicine(1), Pay bills(2), Do laundry(4), Call relatives(5), Go grocery shopping(3)]
+
+          1
+        /   \
+      2       4
+     / \
+    5   3
+```
+
+1. Remove the root and replace it with the last element
+
+```text
+[1, 2, 4, 5, 3] => [3, 2, 4, 5]
+          3
+        /   \
+      2       4
+     /
+    5
+```
+
+2. Now, we need to "heapify" the tree (make sure the heap property is maintained):
+
+```text
+Compare the root 3 with its children (2 and 4).
+The smallest child is 2, so we swap 3 with 2.
+
+          2
+        /   \
+      3       4
+     /
+    5
+
+    [Pay bills(2), Go grocery shopping(3), Do laundry(4), Call relatives(5)]
+```
+
+#### Summary of removing a task:
+
+- Sorted List: O(n) (due to shifting elements after removal).
+  To remove the highest priority task from a sorted list is O(1) but we have to shift all elements left so it is O(n).
+
+- Min Heap: O(log n) (due to the heapify operation).
+  To remove the highest priority task from a min heap is O(1) but we have to heapify the tree so it is O(log n).
+  This involves comparing the root with its children and swapping if necessary.
