@@ -129,8 +129,8 @@ Insert at next available position (left of 4)
 
 Time to insert a new task:
 
-- Brute force method: O(n) This is because we have to compare each element with every other element.
-- Priority queue method: O(log n) This is because we have to compare each element with its parent.
+- Brute force method: `O(n)` This is because we have to compare each element with every other element.
+- Priority queue method: `O(log n)` This is because we have to compare each element with its parent.
 
 Example:
 Assume this list is already sorted in ascending order of priority (lower number = higher priority):
@@ -143,7 +143,7 @@ Call relatives (priority: 5)
 
 New Task to Insert: Take medicine (priority: 1)
 
-Brute Force Method (O(n)):
+Brute Force Method (`O(n)`):
 Step-by-step:
 
 1. Insert at the end: [2, 3, 4, 5, 1] => [Pay bills(2), Go grocery shopping(3), Do laundry(4), Call relatives(5), Take medicine(1)]
@@ -152,9 +152,9 @@ Step-by-step:
 4. Compare with 3 > 1 → swap: [2, 1, 3, 4, 5] => [Pay bills(2), Take medicine(1), Go grocery shopping(3), Do laundry(4), Call relatives(5)]
 5. Compare with 2 > 1 → swap: [1, 2, 3, 4, 5] => [Take medicine(1), Pay bills(2), Go grocery shopping(3), Do laundry(4), Call relatives(5)]
 
-4 comparisons/swaps = O(n) steps in this insert
+4 comparisons/swaps = `O(n)` steps in this insert
 
-Priority Queue Method (O(log n)):
+Priority Queue Method (`O(log n)`):
 
 1. Insert at next available position (left of 4): [2, 3, 4, 5, 1] => [Pay bills(2), Go grocery shopping(3), Do laundry(4), Call relatives(5), Take medicine(1)]
 
@@ -186,6 +186,6 @@ Priority Queue Method (O(log n)):
     5   3
 ```
 
-Only 2 comparisons/swaps were needed = O(log n) steps in this insert. n = 5 (number of elements in the priority queue) and log(n) ≈ 2.32 = 2
+Only 2 comparisons/swaps were needed = `O(log n)` steps in this insert. n = 5 (number of elements in the priority queue) and **log(n) ≈ 2.32 = 2**
 
 We can see using the priority queue method is faster than the brute force method because it requires less comparisons/swaps.
