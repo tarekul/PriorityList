@@ -14,25 +14,25 @@ Task 4: Call relatives (priority: 5) -> this is a highest priority task
 
 ### Implementation: brute force method
 
-Step 1: Insert Do laundry (4) -> [ Do laundry (4) ]
-Step 2: Insert Go grocery shopping (3) -> [ Do laundry (4), Go grocery shopping (3) ]
-Step 3: Swap (since 3 < 4) -> [ Go grocery shopping (3), Do laundry (4) ]
-Step 4: Insert Pay bills (2) -> [ Go grocery shopping (3), Do laundry (4), Pay bills (2) ]
-Step 5: Swap (since 2 < 3) -> [ Pay bills (2), Go grocery shopping (3), Do laundry (4) ]
-Step 6: Swap (since 2 < 4) -> [ Pay bills (2), Go grocery shopping (3), Do laundry (4) ]
-Step 7: Insert Call relatives (5) -> [ Pay bills (2), Go grocery shopping (3), Do laundry (4), Call relatives (5) ]
-Step 8: No swaps needed (5 is the lowest priority)
+- Step 1: Insert Do laundry (4) -> [ Do laundry (4) ]
+- Step 2: Insert Go grocery shopping (3) -> [ Do laundry (4), Go grocery shopping (3) ]
+- Step 3: Swap (since 3 < 4) -> [ Go grocery shopping (3), Do laundry (4) ]
+- Step 4: Insert Pay bills (2) -> [ Go grocery shopping (3), Do laundry (4), Pay bills (2) ]
+- Step 5: Swap (since 2 < 3) -> [ Pay bills (2), Go grocery shopping (3), Do laundry (4) ]
+- Step 6: Swap (since 2 < 4) -> [ Pay bills (2), Go grocery shopping (3), Do laundry (4) ]
+- Step 7: Insert Call relatives (5) -> [ Pay bills (2), Go grocery shopping (3), Do laundry (4), Call relatives (5) ]
+- Step 8: No swaps needed (5 is the lowest priority)
 
 ### Implementation: priority queue method
 
-Step 1: Insert Do laundry (4)
+- Step 1: Insert Do laundry (4)
 
 ```text
           4
         [Do laundry(4)]
 ```
 
-Step 2: Insert Go grocery shopping (3)
+-Step 2: Insert Go grocery shopping (3)
 
 ```text
 Insert at next available position
@@ -52,7 +52,7 @@ Insert at next available position
 [Go grocery shopping(3), Do laundry(4)]
 ```
 
-Step 3: Insert Pay bills (2)
+- Step 3: Insert Pay bills (2)
 
 ```text
 Insert at next available position
@@ -72,7 +72,7 @@ Compare with parent (2 < 3), so swap
 [Pay bills(2), Go grocery shopping(3), Do laundry(4)]
 ```
 
-Step 4: Insert Call relatives (5)
+- Step 4: Insert Call relatives (5)
 
 ```text
 Insert at next available position (left of 4)
