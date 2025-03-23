@@ -146,11 +146,34 @@ New Task to Insert: Take medicine (priority: 1)
 Brute Force Method (`O(n)`):
 Step-by-step:
 
-1. Insert at the end: [2, 3, 4, 5, 1] => [Pay bills(2), Go grocery shopping(3), Do laundry(4), Call relatives(5), Take medicine(1)]
-2. Compare with previous element (5 > 1) → swap: [2, 3, 4, 1, 5] => [Pay bills(2), Go grocery shopping(3), Do laundry(4), Take medicine(1), Call relatives(5)]
-3. Compare with 4 > 1 → swap: [2, 3, 1, 4, 5] => [Pay bills(2), Go grocery shopping(3), Take medicine(1), Do laundry(4), Call relatives(5)]
-4. Compare with 3 > 1 → swap: [2, 1, 3, 4, 5] => [Pay bills(2), Take medicine(1), Go grocery shopping(3), Do laundry(4), Call relatives(5)]
-5. Compare with 2 > 1 → swap: [1, 2, 3, 4, 5] => [Take medicine(1), Pay bills(2), Go grocery shopping(3), Do laundry(4), Call relatives(5)]
+1. Insert at the end: [2, 3, 4, 5, 1]
+
+   ```text
+   [Pay bills(2), Go grocery shopping(3), Do laundry(4), Call relatives(5), Take medicine(1)]
+   ```
+
+2. Compare with previous element (5 > 1) → swap: [2, 3, 4, 1, 5]
+
+   ```text
+   [Pay bills(2), Go grocery shopping(3), Do laundry(4), Take medicine(1), Call relatives(5)]
+   ```
+
+3. Compare with 4 > 1 → swap: [2, 3, 1, 4, 5]
+
+   ```text
+   [Pay bills(2), Go grocery shopping(3), Take medicine(1), Do laundry(4), Call relatives(5)]
+   ```
+
+4. Compare with 3 > 1 → swap: [2, 1, 3, 4, 5]
+
+   ```text
+   [Pay bills(2), Take medicine(1), Go grocery shopping(3), Do laundry(4), Call relatives(5)]
+   ```
+
+5. Compare with 2 > 1 → swap: [1, 2, 3, 4, 5]
+   ```text
+   [Take medicine(1), Pay bills(2), Go grocery shopping(3), Do laundry(4), Call relatives(5)]
+   ```
 
 4 comparisons/swaps = `O(n)` steps in this insert
 
