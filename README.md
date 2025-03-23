@@ -44,13 +44,13 @@ Let's implement a priority queue for a todo list.
    [ Go grocery shopping (3), Do laundry (4), Pay bills (2) ]
    ```
 
-5. Swap (since 2 < 3)
+5. Swap (since 2 < 4)
 
    ```text
-   [ Pay bills (2), Go grocery shopping (3), Do laundry (4) ]
+   [ Go grocery shopping (3), Pay bills (2), Do laundry (4) ]
    ```
 
-6. Swap (since 2 < 4)
+6. Swap (since 2 < 3)
 
    ```text
    [ Pay bills (2), Go grocery shopping (3), Do laundry (4) ]
