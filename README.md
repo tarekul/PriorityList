@@ -62,7 +62,7 @@ Task 4: Call relatives (priority: 5) -> this is a highest priority task
    [ Pay bills (2), Go grocery shopping (3), Do laundry (4), Call relatives (5) ]
    ```
 
-### Implementation: priority queue method
+### Implementation: priority queue method (min heap)
 
 1. Insert Do laundry (4)
 
