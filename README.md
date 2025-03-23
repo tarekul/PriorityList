@@ -220,8 +220,8 @@ swap: [1, 2, 4, 5, 3] => [Take medicine(1), Pay bills(2), Do laundry(4), Call re
     5   3
 ```
 
-Only 2 comparisons/swaps were needed = `O(log n)` steps in this insert.
-n = 5 (number of elements in the priority queue) and **log(n) ≈ 2.32 = 2**
+- Only 2 comparisons/swaps were needed = `O(log n)` steps in this insert.
+- n = 5 (number of elements in the priority queue) and **log(n) ≈ 2.32 = 2**
 
 We can see using the priority queue method is faster than the brute force method because it requires less comparisons/swaps.
 
