@@ -133,7 +133,7 @@ Insert at next available position (left of 4)
 
 ### Compare brute force method with priority queue method
 
-Time to insert a new task:
+Time to insert a new task: n = number of tasks
 
 - Brute force method: `O(n)` This is because we have to compare each element with every other element.
 - Priority queue method: `O(log n)` This is because we have to compare each element with its parent.
