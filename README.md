@@ -147,10 +147,12 @@ Do laundry (priority: 4),
 Call relatives (priority: 5)
 ]
 
-New Task to Insert: Take medicine (priority: 1)
+New Task to Insert:
 
-Brute Force Method (`O(n)`):
-Step-by-step:
+- **Task**: _Take medicine_ 💊  
+  **Priority**: 1 — _Highest priority task_
+
+Brute Force Method `O(n)`:
 
 1. Insert at the end: [2, 3, 4, 5, 1]
 
@@ -183,7 +185,7 @@ Step-by-step:
 
 4 comparisons/swaps = `O(n)` steps in this insert
 
-Priority Queue Method (`O(log n)`):
+Priority Queue Method `O(log n)`:
 
 1. Insert at next available position (left of 4): [2, 3, 4, 5, 1] => [Pay bills(2), Go grocery shopping(3), Do laundry(4), Call relatives(5), Take medicine(1)]
 
