@@ -128,7 +128,7 @@ Insert at next available position (left of 4)
     4      3
    /
  5
-[Pay bills(2), Go grocery shopping(3), Do laundry(4), Call relatives(5)]
+[Pay bills(2), Do laundry(4), Go grocery shopping(3), Call relatives(5)]
 ```
 
 ### Compare brute force method with priority queue method
