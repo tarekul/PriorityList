@@ -149,26 +149,26 @@ app.addView("list", () => {
   for (let i = 0; i < app.todoList.list.length; i++) {
     let bgColor = "";
 
-    // Define colors based on the priority value
     switch (app.todoList.list[i].priority) {
       case "1":
-        bgColor = "rgba(0, 123, 255, 0.8)"; // Blue for Priority 1
+        bgColor = "rgba(56, 152, 255, 0.8)"; // Light Blue for Priority 1
         break;
       case "2":
-        bgColor = "rgba(40, 167, 69, 0.8)"; // Green for Priority 2
+        bgColor = "rgba(70, 189, 132, 0.8)"; // Soft Green for Priority 2
         break;
       case "3":
-        bgColor = "rgba(255, 193, 7, 0.8)"; // Yellow for Priority 3
+        bgColor = "rgba(255, 215, 0, 0.8)"; // Gold for Priority 3
         break;
       case "4":
-        bgColor = "rgba(255, 165, 0, 0.8)"; // Orange for Priority 4
+        bgColor = "rgba(255, 126, 0, 0.8)"; // Warm Orange for Priority 4
         break;
       case "5":
-        bgColor = "rgba(108, 117, 125, 0.8)"; // Gray for Priority 5
+        bgColor = "rgba(112, 128, 144, 0.8)"; // Slate Gray for Priority 5
         break;
       default:
         bgColor = "rgba(255, 255, 255, 0.8)"; // Default if priority doesn't match
     }
+
     list += `<li class="list-group-item d-flex justify-content-between align-items-center mt-2" style="background-color: ${bgColor};">
           ${app.todoList.list[i].task} (Priority: ${app.todoList.list[i].priority})
         </li>`;
