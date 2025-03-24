@@ -184,8 +184,8 @@ app.initializeViews();
 
 app.addEvent(".js-add", "click", () => {
   const task = document.querySelector(".js-text-input").value;
-  const priority = document.querySelector(".js-priority-input").value;
-  if (!task || !priority) {
+  const priority = document.querySelector(".js-priority-input").value || "1";
+  if (!task) {
     return;
   }
   app.todoList.addTask(task, priority);
@@ -197,8 +197,8 @@ app.addEvent(".js-add", "click", () => {
 app.addEvent(".js-priority-input", "keydown", (e) => {
   if (e.key === "Enter") {
     const task = document.querySelector(".js-text-input").value;
-    const priority = document.querySelector(".js-priority-input").value;
-    if (!task || !priority) {
+    const priority = document.querySelector(".js-priority-input").value || "1";
+    if (!task) {
       return;
     }
     app.todoList.addTask(task, priority);
@@ -211,8 +211,8 @@ app.addEvent(".js-priority-input", "keydown", (e) => {
 app.addEvent(".js-text-input", "keydown", (e) => {
   if (e.key === "Enter") {
     const task = document.querySelector(".js-text-input").value;
-    const priority = document.querySelector(".js-priority-input").value;
-    if (!task || !priority) {
+    const priority = document.querySelector(".js-priority-input").value || "1";
+    if (!task) {
       return;
     }
     app.todoList.addTask(task, priority);
