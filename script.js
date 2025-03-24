@@ -191,6 +191,34 @@ app.addEvent(".js-add", "click", () => {
   app.rerenderView("list");
 });
 
+app.addEvent(".js-priority-input", "keydown", (e) => {
+  if (e.key === "Enter") {
+    const task = document.querySelector(".js-text-input").value;
+    const priority = document.querySelector(".js-priority-input").value;
+    if (!task || !priority) {
+      return;
+    }
+    app.todoList.addTask(task, priority);
+    document.querySelector(".js-text-input").value = "";
+    document.querySelector(".js-priority-input").value = "";
+    app.rerenderView("list");
+  }
+});
+
+app.addEvent(".js-text-input", "keydown", (e) => {
+  if (e.key === "Enter") {
+    const task = document.querySelector(".js-text-input").value;
+    const priority = document.querySelector(".js-priority-input").value;
+    if (!task || !priority) {
+      return;
+    }
+    app.todoList.addTask(task, priority);
+    document.querySelector(".js-text-input").value = "";
+    document.querySelector(".js-priority-input").value = "";
+    app.rerenderView("list");
+  }
+});
+
 app.addEvent(".js-delete", "click", () => {
   if (app.todoList.list.length > 0) {
     app.todoList.removeTask();
