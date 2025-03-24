@@ -133,7 +133,7 @@ app.addView(
 app.addView("input", () => {
   return `<div class="input-group mb-3">
       <input type="text" class="js-text-input mr-2 mb-2" placeholder="Add new task">
-      <input type="number" class="js-priority-input mr-2 mb-2" style="width: 75px;" placeholder="Priority">
+      <input type="number" min="1" max="6" class="js-priority-input mr-2 mb-2" style="width: 75px;" placeholder="Priority">
       <div class="input-group-append">
         <button class="js-add btn btn-outline-secondary" type="button" id="button-addon2">Add</button>
       </div>
@@ -164,6 +164,9 @@ app.addView("list", () => {
         break;
       case "5":
         bgColor = "rgba(112, 128, 144, 0.8)"; // Slate Gray for Priority 5
+        break;
+      case "6":
+        bgColor = "rgba(118, 138, 13, 0.8)";
         break;
       default:
         bgColor = "rgba(255, 255, 255, 0.8)"; // Default if priority doesn't match
