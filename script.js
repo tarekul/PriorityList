@@ -132,8 +132,8 @@ app.addView(
 
 app.addView("input", () => {
   return `<div class="input-group mb-3">
-      <input type="text" class="js-text-input form-control" placeholder="Add new task">
-      <input type="number" class="js-priority-input form-control" placeholder="Priority">
+      <input type="text" class="js-text-input mr-2 mb-2" placeholder="Add new task">
+      <input type="number" class="js-priority-input mr-2 mb-2" style="width: 75px;" placeholder="Priority">
       <div class="input-group-append">
         <button class="js-add btn btn-outline-secondary" type="button" id="button-addon2">Add</button>
       </div>
